@@ -18,3 +18,16 @@ for (i = 1; i <= 5; i++) {
 } 
 
 /* Wiring up the Darken/Lighten button  */
+btn.onclick = function() {
+    let atr = btn.getAttribute('class');
+    if (atr === "dark") {
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.5)'; /* Adds darken effect to full-size image*/
+        btn.setAttribute('class', 'light');
+        btn.innerText = "Lighten";
+    }
+    else if (atr === "light") {
+        overlay.style.backgroundColor = 'rgba(0,0,0,0)'; /* Adds transparent overlay to full-size image*/
+        btn.setAttribute('class', 'dark');
+        btn.innerText = "Darken";
+    }
+}
