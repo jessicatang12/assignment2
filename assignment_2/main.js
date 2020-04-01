@@ -32,5 +32,5 @@ btn.onclick = function() {
         btn.innerText = "Darken";
     }
 }
-}
+
 
