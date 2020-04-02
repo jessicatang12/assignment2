@@ -10,15 +10,14 @@ h2 {
 
 body {
   width: 640px;
-  height: 900px;
   margin: 0 auto;
+  
 }
-
 
 .full-img {
   position: relative;
   display: block;
-  width: 640px;
+  max-width: 640px;
   height: 480px;
 }
 
@@ -26,8 +25,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 640px;
-  height: 480px;
+  display: block;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0,0,0,0);
 }
 
@@ -49,10 +49,22 @@ button {
   cursor: pointer;
 }
 
-
-body {
+html {
+  height: 900px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile screen or medium screen*/
+@media screen and (max-width : 1000px) {
+  .full-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .gallery {
+    width: 100%;
+  }
+  .headers {
+    width: 100%;
+  }
 }
