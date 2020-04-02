@@ -15,6 +15,7 @@ for (i = 1; i <= 5; i++) {
     newImage.onclick = function refresh(pict) {
         displayedImage.src = pict.target.src;
     }
+
 } 
 
 /* Wiring up the Darken/Lighten button  */
@@ -31,3 +32,5 @@ btn.onclick = function() {
         btn.innerText = "Darken";
     }
 }
+}
+
